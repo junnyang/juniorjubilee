@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router";
 import { NavLink } from "react-router-dom";
 
 import logo from "../assets/JJ_logo.png";
+import insta from "../assets/Instagram.jpg";
 
 function Header() {
   const mainEnter = () => {
