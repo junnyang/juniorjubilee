@@ -1,0 +1,12 @@
+.Footer {
+  border-top: 1px solid #828181;
+  padding: 10px 100px 15px 100px;
+}
+
+.footer_right {
+  justify-items: end;
+}
+
+.insta_logo {
+  width: 20px;
+}
