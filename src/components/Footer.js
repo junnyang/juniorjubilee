@@ -21,7 +21,7 @@ function Footer() {
               window.open("https://www.instagram.com/juniorjubilee__/")
             }
           >
-            <img className="insta_logo" src={insta} alt="instagram"></img>
+            <img className="insta_logo" src={insta} alt="insta"></img>
             <span>instagram</span>
           </div>
         </div>
