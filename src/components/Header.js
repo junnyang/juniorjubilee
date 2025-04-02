@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import "./styles/Header.css";
 
-import logo from "../assets/JJ_logo.png";
+import logo from "../assets/JJ_logo.svg";
 
 function Header() {
   const navigate = useNavigate();
@@ -21,6 +21,7 @@ function Header() {
       <div className="Header">
         <div className="header_left">
           <img src={logo} id="main_logo" alt="main-logo" onClick={mainEnter} />
+          <span className="left-name">주니어 쥬빌리</span>
         </div>
         <div className="header_right">
           <NavLink
