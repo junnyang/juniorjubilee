@@ -1,0 +1,27 @@
+.applys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+.apply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+
+  width: 450px;
+  height: 100px;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+
+  font-family: ProductSans-Regular;
+  font-size: 25px;
+}
+
+@font-face {
+  font-family: ProductSans-Regular;
+  src: url(/src/fonts/ProductSans-Regular\ .ttf);
+}

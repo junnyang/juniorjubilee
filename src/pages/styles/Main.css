@@ -1,26 +1,3 @@
-.banner {
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/src/assets/all.jpeg);
-  background-size: cover;
-  position: relative;
-  display: inline-block;
-  background-repeat: no-repeat;
-}
-
-.banner-txt {
-  text-align: center;
-  position: absolute; /* 핵심코드 */
-  top: 45%; /* 핵심코드 */
-  left: 50%; /* 핵심코드 */
-  transform: translate(-50%, -50%); /* 핵심코드 */
-  color: #fff;
-  font-family: ProductSans-Black;
-  font-size: 100px;
-  font-weight: bold;
-}
-
 @font-face {
   font-family: ProductSans-Black;
   src: url(/src/fonts/ProductSans-BlackItalic.ttf);

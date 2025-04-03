@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import "./styles/Footer.css";
 
-import logo from "../assets/JJ_logo.png";
 import insta from "../assets/Instagram.jpg";
 
 function Footer() {
