@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router";
+import React from "react";
+// import { Link } from "react-router";
 
 import "./styles/Main.css";
 import Header from "../components/Header";
