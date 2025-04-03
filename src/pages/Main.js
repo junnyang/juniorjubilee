@@ -9,7 +9,13 @@ function Main() {
     <div className="wrap">
       <Header></Header>
       <div className="contents">
-        <div>안녕</div>
+        <div className="banner">
+          <h1 className="banner-txt">
+            We are
+            <br />
+            주니어 쥬빌리
+          </h1>
+        </div>
       </div>
       <Footer></Footer>
     </div>

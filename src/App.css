@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  font-family: ProductSans-Regular;
+}
+
+@font-face {
+  font-family: ProductSans-Regular;
+  src: url(/src/fonts/ProductSans-Regular\ .ttf);
+}

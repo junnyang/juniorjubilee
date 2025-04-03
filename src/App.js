@@ -7,14 +7,16 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Main />}></Route>
-        <Route path="/intro" element={<Intro />}></Route>
-        <Route path="/camp" element={<Camp />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Main />}></Route>
+          <Route path="/intro" element={<Intro />}></Route>
+          <Route path="/camp" element={<Camp />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
