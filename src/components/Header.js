@@ -38,11 +38,6 @@ function Header() {
     }
   }, [userAuth, userInfo]);
 
-  const loginEnter = () => {
-    navigate("/login");
-    window.location.reload();
-  };
-
   const homeEnter = () => {
     navigate("/");
     window.location.reload();
