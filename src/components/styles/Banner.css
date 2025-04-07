@@ -23,7 +23,7 @@
   font-size: 100px;
   font-weight: bold;
   animation: reveal 1s cubic-bezier(0, 0, 0.58, 1) forwards;
-  text-shadow: 3px 4px 5px #828181;
+  text-shadow: 3px 4px 5px #474747;
 }
 
 @keyframes reveal {
