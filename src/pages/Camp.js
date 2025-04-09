@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Camp from "../components/Camp";
+import Campc from "../components/Campc";
 
 function Camp() {
   return (
     <div className="wrap">
       <Header></Header>
-      <Camp></Camp>
+      <Campc></Campc>
       <Footer></Footer>
     </div>
   );
