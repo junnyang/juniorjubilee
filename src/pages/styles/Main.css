@@ -1,4 +1,8 @@
 @font-face {
   font-family: ProductSans-Black;
-  src: url(/src/fonts/ProductSans-BlackItalic.ttf);
+  src: url(/src/fonts/ProductSans-Black.ttf);
+}
+@font-face {
+  font-family: ProductSans-Regular;
+  src: url(/src/fonts/ProductSans-Regular\ .ttf);
 }
