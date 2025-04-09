@@ -1,0 +1,42 @@
+.ministry {
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  font-family: ProductSans-Regular;
+
+  margin-top: 200px;
+  margin-bottom: 400px;
+}
+
+.mini-head {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.mini-cont {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 50px;
+}
+
+.mini-ol {
+  padding: 0;
+}
+
+.cont-li {
+  display: flex;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.cont-txt {
+  display: flex;
+  justify-content: center;
+
+  font-size: 20px;
+}
