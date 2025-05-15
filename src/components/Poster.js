@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import poster from "../assets/24 poster.svg";
+import poster from "../assets/25 poster.svg";
 import "./styles/Poster.css";
 export class Poster extends Component {
   render() {
