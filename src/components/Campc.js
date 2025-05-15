@@ -12,7 +12,16 @@ export class Camp extends Component {
           <div className="camp-name">MISSION COMPLETE</div>
         </div>
         <div className="camp-poster">
-          <img className="poster" src={Poster} alt="poster" />
+          <img
+            className="poster"
+            src={Poster}
+            alt="poster"
+            onClick={() =>
+              window.open(
+                "https://docs.google.com/forms/d/e/1FAIpQLSfV5MsxeynqIQ0UfcxV0UElxtZKXrubMC0vm8fNZCLy_EXjSQ/viewform"
+              )
+            }
+          />
         </div>
       </div>
     );
