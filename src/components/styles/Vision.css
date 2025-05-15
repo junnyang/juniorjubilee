@@ -1,27 +1,81 @@
 .vision {
-  display: column;
+  display: flex; /* column은 유효한 값이 아니므로 flex로 수정 */
+  flex-direction: column; /* 세로 방향 정렬 */
   width: 100%;
   justify-content: center;
   align-items: center;
-
   margin-bottom: 200px;
+  box-sizing: border-box;
 }
 
 .vision-txt {
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 30px 0px 30px 0px;
+  align-items: center;
+  padding: 30px 20px; /* 좌우 패딩 추가 */
+  text-align: center;
 
   font-family: ProductSans-Regular;
   font-weight: bold;
   font-size: 35px;
+  font-size: clamp(24px, 5vw, 35px); /* 반응형 폰트 크기 */
+  line-height: 1.4;
 }
 
 .vision-txt h2 {
-  margin: 0px;
+  margin: 0;
+  word-break: keep-all; /* 단어 단위로 줄바꿈 */
 }
 
 .vision-pic {
   width: 100%;
+  max-width: 1200px; /* 최대 너비 제한 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.vision-pic img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .vision {
+    margin-bottom: 150px;
+    padding: 0 15px;
+  }
+
+  .vision-txt {
+    padding: 25px 15px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .vision {
+    margin-bottom: 100px;
+    padding: 0 8px;
+  }
+
+  .vision-txt {
+    padding: 20px 10px;
+  }
+
+  .vision-txt h2 {
+    word-break: break-word; /* 모바일에서 긴 단어 처리 */
+  }
+}
+
+/* 작은 모바일 (375px 이하) */
+@media (max-width: 375px) {
+  .vision {
+    margin-bottom: 80px;
+  }
+
+  .vision-txt {
+    padding: 15px 10px;
+  }
 }

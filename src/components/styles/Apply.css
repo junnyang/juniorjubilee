@@ -3,7 +3,10 @@
   align-items: center;
   justify-content: center;
   gap: 150px;
+  flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
+  padding: 10px 20px;
 }
+
 .apply {
   display: flex;
   justify-content: center;
@@ -11,6 +14,7 @@
   margin: 50px 0px;
 
   width: 450px;
+  max-width: 100%; /* 최대 너비를 100%로 제한 */
   height: 100px;
 
   background: #ffffff;
@@ -19,9 +23,48 @@
 
   font-family: ProductSans-Regular;
   font-size: 25px;
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: 10px 20px; /* 내부 여백 추가 */
+  box-sizing: border-box; /* 패딩 포함 박스 크기 계산 */
 }
 
 @font-face {
   font-family: ProductSans-Regular;
   src: url(/src/fonts/ProductSans-Regular\ .ttf);
+}
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .applys {
+    gap: 50px; /* 간격 축소 */
+  }
+
+  .apply {
+    width: 350px;
+    height: 80px;
+    font-size: 22px;
+    margin: 30px 0px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .applys {
+    gap: 0px; /* 간격 더 축소 */
+    flex-direction: column; /* 세로 방향으로 변경 */
+  }
+
+  .apply {
+    width: 90%; /* 화면 너비의 90% 사용 */
+    height: 60px;
+    font-size: 18px;
+    margin: 10px 0px;
+  }
+}
+
+/* 작은 모바일 (375px 이하) */
+@media (max-width: 375px) {
+  .apply {
+    font-size: 16px;
+    height: 50px;
+  }
 }

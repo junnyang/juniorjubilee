@@ -3,4 +3,38 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  padding: 0 20px; /* 좌우 여백 추가 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 포스터 이미지 스타일 (필요한 경우) */
+.poster-div img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .poster-div {
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .poster-div {
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+}
+
+/* 작은 모바일 (375px 이하) */
+@media (max-width: 375px) {
+  .poster-div {
+    margin-bottom: 10px;
+    padding: 0 8px;
+  }
 }

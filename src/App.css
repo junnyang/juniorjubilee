@@ -2,6 +2,20 @@
   text-align: center;
   font-family: ProductSans-Regular;
 }
+.wrap {
+  padding-top: 90px;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding-top: 75px;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding-top: 65px;
+  }
+}
 
 @font-face {
   font-family: ProductSans-Regular;

@@ -7,6 +7,55 @@
   justify-items: end;
 }
 
+.footer_contents {
+  font-size: clamp(8px, 3vw, 15px);
+}
+
+.insta {
+  display: flex;
+  font-size: clamp(8px, 3vw, 15px);
+  justify-content: center;
+}
+
 .insta_logo {
   width: 20px;
+}
+
+/* 모바일 화면 (작은 화면) */
+@media screen and (max-width: 480px) {
+  .Footer {
+    padding: 10px 20px 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer_right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .insta_logo {
+    width: 13px;
+  }
+}
+
+/* 태블릿 화면 (중간 크기 화면) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .Footer {
+    padding: 10px 40px 15px 40px;
+  }
+
+  .insta_logo {
+    width: 20px;
+  }
+}
+
+/* 데스크톱 화면 (큰 화면) */
+@media screen and (min-width: 1200px) {
+  .Footer {
+    padding: 10px 100px 15px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }

@@ -3,14 +3,13 @@ import { useNavigate, useLocation } from "react-router";
 import { NavLink } from "react-router-dom";
 import "../components/styles/Header.css";
 import main_logo from "../assets/JJ_logo.svg";
-// import { useRecoilValue } from "recoil";
-// import { sessionState } from "../atom/atom";
 
 function Header() {
   // eslint-disable-next-line
-  // const [notLoggedIn, setNotLoggedIn] = useState(false);
   // eslint-disable-next-line
   const [manager, setManager] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const location = useLocation();
   const navigate = useNavigate();
   const userInfo = sessionStorage.getItem("serverResponse");
@@ -55,23 +54,39 @@ function Header() {
     return location.pathname.startsWith("/mypage");
   };
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  // 라우트 변경 시 모바일 메뉴 닫기
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location]);
+
   return (
     <div>
-      <div className="Header_Container">
-        <div className="Header_Left">
-          <img
-            id="main-logo"
-            src={main_logo}
-            alt="main_logo"
-            onClick={homeEnter}
-          />
+      <div
+        className={`Header_Container ${
+          mobileMenuOpen ? "mobile-menu-open" : ""
+        }`}
+      >
+        <div className="Header_Left" onClick={homeEnter}>
+          <img id="main-logo" src={main_logo} alt="main_logo" />
           <span>주니어 쥬빌리</span>
         </div>
+        <button
+          className="mobile-menu-button"
+          onClick={toggleMobileMenu}
+          aria-label="메뉴 토글"
+        >
+          {mobileMenuOpen ? "✕" : "☰"}
+        </button>
         <div className="Header_Right">
           <NavLink
             className="Header_Link"
             style={({ isActive }) => (isActive ? activeStyle : {})}
             to="/"
+            onClick={() => setMobileMenuOpen(false)}
           >
             <span>주니어쥬빌리</span>
           </NavLink>
@@ -79,6 +94,7 @@ function Header() {
             className="Header_Link"
             style={({ isActive }) => (isActive ? activeStyle : {})}
             to="/intro"
+            onClick={() => setMobileMenuOpen(false)}
           >
             <span>소개</span>
           </NavLink>
@@ -86,6 +102,7 @@ function Header() {
             className="Header_Link"
             style={({ isActive }) => (isActive ? activeStyle : {})}
             to="/camp"
+            onClick={() => setMobileMenuOpen(false)}
           >
             <span>캠프</span>
           </NavLink>
@@ -93,6 +110,7 @@ function Header() {
             className="Header_Link"
             style={({ isActive }) => (isActive ? activeStyle : {})}
             to="/contact"
+            onClick={() => setMobileMenuOpen(false)}
           >
             <span>문의</span>
           </NavLink>

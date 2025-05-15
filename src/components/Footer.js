@@ -11,8 +11,9 @@ function Footer() {
         <div className="footer_left"></div>
         <div className="footer_right">
           <div className="footer_contents">주니어 쥬빌리</div>
+          <div className="footer_contents">연락처: 010-3161-8383</div>
           <div className="footer_contents">
-            연락처: 010-3161-8383 | 메일 JuniorJubilee2015@gmail.com
+            메일 JuniorJubilee2015@gmail.com
           </div>
           <div
             className="insta"

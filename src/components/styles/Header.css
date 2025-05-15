@@ -3,22 +3,30 @@
   padding: 10px 150px 5px 100px;
   height: 80px;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; /* flex-start에서 center로 변경 */
   border-bottom: 1px solid #828181;
   font-size: 18px;
   font-weight: normal;
   color: #000;
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
+
 .Header_Right {
   display: flex;
   height: 100%;
   align-items: center;
-  padding-top: px;
+  gap: 30px; /* span margin 대신 gap 사용 */
 }
+
 .Header_Right span {
-  margin: 30px 0 30px 30px;
+  margin: 0; /* gap으로 대체 */
 }
+
 .Header_Left {
   display: flex;
   align-items: center;
@@ -28,22 +36,150 @@
   padding-left: 10px;
   font-size: 30px;
 }
+
 .Header_Link {
   cursor: pointer;
   text-decoration: none;
   color: #000;
+  transition: color 0.3s ease;
+}
 
-  &:hover {
-    color: #eb5a3c;
-  }
+.Header_Link:hover {
+  color: #eb5a3c;
 }
 
 #main-logo {
   width: 45px;
   cursor: pointer;
+}
 
-  &:active {
-    transform: translateY(1px);
-    transition: all 0.1s ease;
+#main-logo:active {
+  transform: translateY(1px);
+  transition: all 0.1s ease;
+}
+
+/* 모바일 메뉴 버튼 (기본적으로 숨김) */
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  padding: 10px;
+  margin-left: auto; /* 오른쪽 정렬 */
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-button:active {
+  transform: scale(0.95);
+}
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  .Header_Container {
+    padding: 10px 50px 5px 30px;
   }
+
+  .Header_Right {
+    gap: 20px;
+  }
+
+  .Header_Left span {
+    font-size: 26px;
+  }
+
+  .Header_Right span {
+    font-size: 16px;
+  }
+}
+
+/* 모바일 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .Header_Container {
+    padding: 10px 20px;
+    height: 70px;
+  }
+
+  .Header_Right {
+    display: none; /* 모바일에서 네비게이션 숨김 */
+  }
+
+  .mobile-menu-button {
+    display: block; /* 모바일 메뉴 버튼 표시 */
+  }
+
+  .Header_Left span {
+    font-size: 24px;
+  }
+
+  #main-logo {
+    width: 40px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .Header_Container {
+    padding: 10px 15px;
+    height: 60px;
+  }
+
+  .Header_Left span {
+    font-size: 20px;
+    padding-left: 8px;
+  }
+
+  #main-logo {
+    width: 35px;
+  }
+
+  .mobile-menu-button {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+
+/* 모바일 메뉴 펼친 상태 (JavaScript로 toggle될 클래스) */
+.mobile-menu-open .Header_Right {
+  display: flex;
+  height: 120px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background-color: #fff;
+  border-bottom: 1px solid #828181;
+  padding: 10px;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mobile-menu-open .Header_Right .Header_Link {
+  display: block;
+  padding: 0px 0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-open .Header_Right .Header_Link:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-open .Header_Right .Header_Link:active {
+  background-color: #f0f0f0;
 }
