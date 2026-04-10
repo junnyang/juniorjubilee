@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Poster from "../assets/25 poster.svg";
+import Poster from "../assets/26 poster.svg";
 import "./styles/Campc.css";
 
 export class Camp extends Component {
@@ -8,19 +8,15 @@ export class Camp extends Component {
     return (
       <div className="camp">
         <div className="camp-name-div">
-          <div className="camp-name">2025</div>
-          <div className="camp-name">MISSION COMPLETE</div>
+          <div className="camp-name">2026</div>
+          <div className="camp-name">하나님의 긍휼</div>
         </div>
         <div className="camp-poster">
           <img
             className="poster"
             src={Poster}
             alt="poster"
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSfV5MsxeynqIQ0UfcxV0UElxtZKXrubMC0vm8fNZCLy_EXjSQ/viewform"
-              )
-            }
+            onClick={() => window.open("https://forms.gle/MUSWqQMdefx82QJy5")}
           />
         </div>
       </div>
