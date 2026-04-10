@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Poster from "../assets/26 poster.svg";
+import Poster from "../assets/26 poster.jpeg";
 import "./styles/Campc.css";
 
 export class Camp extends Component {
